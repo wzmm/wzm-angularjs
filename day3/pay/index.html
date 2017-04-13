@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>demo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/swiper.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body  ng-controller="zong">
+    <header class="header">
+        <p class="left"><i class="fa fa-angle-left f16"></i></p>
+        <p class="center">订单支付</p>
+        <p class="right"><i class="fa fa-commenting-o f16"></i></p>
+    </header>
+
+
+    <section class="section">
+        <div class="person">
+            <div class="left">
+                <p><span>路飞</span> 138****8888</p>
+                <p class=""><i class="fa fa-map-marker f16"></i> 北京市海淀区知春路北京市海淀区 知春路</p>
+            </div>
+            <div class="right">
+                <i class="fa fa-angle-right f20"></i>
+            </div>
+        </div>
+        <div class="bor">
+            <img src="images/2_02.png" alt="">
+        </div>
+        <div class="shop">
+            <p class="tit"><i class="fa fa-home f20"></i> 恒之然旗舰店</p>
+            <dl>
+                <dt><img src="images/1_03.png" alt=""></dt>
+                <dd>
+                    <p>维维嚼益嚼水果大豆棒橙味维维嚼 益嚼水果大豆棒橙味...</p>
+                    <p class="price">￥<span>{{price}}</span></p>
+                    <p class="price1">￥1000.00</p>
+                </dd>
+                <p class="num">
+                    <span ng-click="jian()">-</span><span class="number">{{num}}</span><span ng-click="jia()">+</span>
+                </p>
+            </dl>
+            <p class="pri">商品总金额:<span class="right">￥<span>{{price}}</span>.00</span></p>
+            <p class="pri">运费:<span class="right">￥10.00</span></p>
+            <p class="pri last">总额（含运费）:<span class="right red">￥<span>{{zong}}</span>.00</span></p>
+        </div>
+        <div class="pay">
+            <p class="btn">
+                <span class="left">余额支付 ¥100.00</span>
+                <span class = "bourn bourn4 right">
+                    <input type="checkbox" id = "ck">
+                    <label for="ck" class = "ck-green" ng-class="flag1" ng-click="click1()"><i></i></label>
+                </span>
+            </p>
+            <p class="btn">
+                <span class="left">奖金支付 ¥100.00</span>
+                <span class = "bourn bourn4 right">
+                    <input type="checkbox" id = "ck1">
+                    <label for="ck1" class = "ck-green" ng-class="flag2" ng-click="click2()"><i></i></label>
+                </span>
+            </p>
+            <p class="btn">
+                <span class="left">其他支付方式</span>
+                <span class = "bourn bourn4 right">
+                    <i class="fa fa-angle-right f20"></i>
+                </span>
+            </p>
+        </div>
+    </section>
+     <div class="mark">
+         <p>金额不足，请选择其他支付方式！</p>
+     </div>
+
+    <footer class="footer">
+        <div class="left">
+            <p class="zong">总计：￥<span>{{total}}</span>.00</p>
+            <p class="han">（含运费）</p>
+        </div>
+        <div class="right">
+            提交订单
+        </div>
+    </footer>
+
+
+    <script src = "js/angular.js"></script>
+    <script>
+        var app = angular.module('app',[])
+        app.controller('zong',function($scope){
+            $scope.num="1";
+            $scope.price=988;
+            $scope.zong=998;
+            $scope.jian=function(){
+                if($scope.num>1){
+                    $scope.num--;
+                    $scope.zong=$scope.price*$scope.num+10;
+                    $scope.total=$scope.price*$scope.num+10;
+                }
+
+            }
+            $scope.jia=function(){
+                $scope.num++;
+                $scope.zong=$scope.price*$scope.num;
+                $scope.total=$scope.price*$scope.num;
+            }
+
+
+            $scope.flag1=false;
+            $scope.total=$scope.price+10;
+            $scope.click1=function(){
+
+                if(!$scope.flag1){
+                    $scope.total=$scope.total-100;
+                    $scope.flag1=true;
+                }else{
+                    $scope.total=$scope.total+100;
+                    $scope.flag1=false;
+                }
+            }
+
+            $scope.flag2=false;
+            $scope.total=$scope.price+10;
+            $scope.click2=function(){
+            console.log(11)
+                if(!$scope.flag2){
+                    $scope.total=$scope.total-100;
+                    $scope.flag2=true;
+                }else{
+                    $scope.total=$scope.total+100;
+                    $scope.flag2=false;
+                }
+            }
+
+
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+header {
+  height: 0.44rem;
+  position: relative;
+  display: flex;
+  line-height: 0.44rem;
+  border-bottom: 1px solid #a3a3a3;
+}
+header .left {
+  position: absolute;
+  left: 0.15rem;
+}
+header .center {
+  margin: auto;
+  font-size: 0.14rem;
+}
+header .right {
+  position: absolute;
+  right: 0.15rem;
+}
+
+section {
+  flex: 1;
+  overflow-y: scroll;
+}
+section .person {
+  height: 0.7rem;
+  display: flex;
+  position: relative;
+  color: #706d6d;
+}
+section .person span {
+  color: #000;
+}
+section .person .left {
+  position: absolute;
+  left: 0.15rem;
+}
+section .person .left p {
+  padding-top: 0.1rem;
+}
+section .person .right {
+  position: absolute;
+  right: 0.15rem;
+  height: 100%;
+  line-height: 0.7rem;
+}
+section .bor {
+  height: 0.1rem;
+  border-bottom: 0.1rem solid #eeeeee;
+}
+section .bor img {
+  width: 100%;
+  height: 100%;
+}
+section .shop {
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  border-bottom: 0.06rem #eee solid;
+}
+section .shop .tit {
+  line-height: 0.44rem;
+}
+section .shop .tit i {
+  color: #ff6d1f;
+}
+section .shop dl {
+  overflow: hidden;
+  height: 0.8rem;
+  display: flex;
+  position: relative;
+  margin-bottom: 0.15rem;
+}
+section .shop dl dt {
+  padding-right: 0.15rem;
+}
+section .shop dl dt img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+section .shop dl .price {
+  color: #fc4141;
+  padding-top: 0.16rem;
+}
+section .shop dl .price1 {
+  color: #ccc;
+  font-size: 0.1rem;
+  text-decoration: line-through;
+}
+section .shop dl .num {
+  position: absolute;
+  right: 0;
+  bottom: 0.1rem;
+}
+section .shop dl .num span {
+  padding: 0.06rem;
+  border: 1px solid #ccc;
+}
+section .shop dl .num .number {
+  padding: 0.06rem 0.1rem;
+  border-left: 0;
+  border-right: 0;
+}
+section .shop .pri {
+  line-height: 0.16rem;
+  color: #ccc;
+  fon-size: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+section .shop .pri .right {
+  float: right;
+}
+section .shop .pri .red {
+  color: #fc4141;
+  font-size: 0.12rem;
+}
+section .pay {
+  border-bottom: 0.06rem #eee solid;
+}
+section .pay .btn {
+  height: 0.46rem;
+  line-height: 0.46rem;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+section .pay .btn .left {
+  position: absolute;
+  left: 0.15rem;
+}
+section .pay .btn .right {
+  position: absolute;
+  right: 0.15rem;
+  color: #000;
+}
+section .pay .btn .right i {
+  color: #a3a3a3;
+}
+section .pay input {
+  display: none;
+}
+section .pay label {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-top: 0.08rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+}
+section .pay label i {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  left: 0;
+  top: 0;
+  -webkit-transition: left 0.5s;
+}
+section .pay input:checked + label {
+  background: #4cd964;
+}
+section .pay input:checked + label i {
+  left: 0.24rem;
+  background: #fff;
+}
+
+footer {
+  height: 0.6rem;
+  display: flex;
+}
+footer .left {
+  position: relative;
+  width: 70%;
+}
+footer .left .zong {
+  position: absolute;
+  padding-top: 0.15rem;
+  right: 0.15rem;
+  color: #fc4141;
+}
+footer .left .han {
+  position: absolute;
+  padding-top: 0.3rem;
+  right: 0.25rem;
+}
+footer .right {
+  background: #fc4141;
+  width: 30%;
+  color: #fff;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.14rem;
+}
+
+.mark {
+  height: 0.3rem;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 0.3rem;
+  color: #fff;
+  position: absolute;
+  bottom: 0.7rem;
+  margin-left: 10%;
+  text-align: center;
+  border-radius: 0.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
